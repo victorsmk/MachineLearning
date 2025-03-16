@@ -8,6 +8,22 @@ class Scalar:
         self.prev = children
         self.back = lambda: None
 
+    def relu(self):
+        out = Scalar(max(self.data, 0.0), (self,))
+
+        def back():
+            self.grad += (0.0 if self.data < 0 else 1.0) * out.grad
+        out.back = back
+        return out
+
+    def sigmoid(self):
+        out = Scalar(1/(1+m.exp(1)**self.data), (self,))
+
+        def back():
+            self.grad += out.grad * out.data * (1 - out.data)
+        out.back = back
+        return out
+
     def __repr__(self):
         return f"Scalar(data = {self.data}, grad = {self.grad})"
 
@@ -32,7 +48,7 @@ class Scalar:
     def __pow__(self, other):
         other = other if isinstance(other, Scalar) else Scalar(other)
         assert isinstance(other.data, (int, float)), "Please enter an integer/float power"
-        out = Scalar(self.data ** other.data, (self,))
+        out = Scalar(self.data ** other.data, (self, other))
 
         def back():
             self.grad += other.data * (self.data**(other.data - 1)) * out.grad
@@ -73,6 +89,6 @@ class Scalar:
     def __rmul__(self, other):
         return self * other
 
-    def __rtruediv__(self, other): 
+    def __rtruediv__(self, other):
         return other * self ** -1
 
