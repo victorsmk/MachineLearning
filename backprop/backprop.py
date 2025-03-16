@@ -17,7 +17,7 @@ class Scalar:
         return out
 
     def sigmoid(self):
-        out = Scalar(1/(1+m.exp(1)**self.data), (self,))
+        out = Scalar(1/(1+m.exp(1)**(-self.data)), (self,))
 
         def back():
             self.grad += out.grad * out.data * (1 - out.data)
