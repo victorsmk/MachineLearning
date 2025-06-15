@@ -1,2 +1,2 @@
-# ML
-# As the title says, some ML mini-projects / practice
+# Machine Learning
+# As the title says, some Machine Learning projects
