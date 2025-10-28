@@ -20,7 +20,7 @@ The dataset used is the **Pima Indians Diabetes Database** from Kaggle.
 
 ---
 
-## 🛠️ Methodology
+## Methodology
 
 1.  **Load Data:** The `diabetes.csv` file is loaded into a pandas DataFrame.
 2.  **Pre-processing:**
@@ -35,7 +35,7 @@ The dataset used is the **Pima Indians Diabetes Database** from Kaggle.
 
 ---
 
-## 🚀 Model 1: Random Forest (Scikit-learn)
+## Model 1: Random Forest (Scikit-learn)
 
 * **Implementation:** `RandomForestClassifier` from `sklearn.ensemble`.
 * **Hyperparameters:** `n_estimators=100`, `oob_score=True`, `random_state=42`.
@@ -60,7 +60,7 @@ The dataset used is the **Pima Indians Diabetes Database** from Kaggle.
 
 ---
 
-## 🚀 Model 2: XGBoost
+## Model 2: XGBoost
 
 * **Implementation:** `XGBClassifier` from `xgboost`.
 * **Hyperparameters:** `n_estimators=100`, `learning_rate=1`, `max_depth=6`, `objective='binary:logistic'`.
@@ -83,7 +83,7 @@ The dataset used is the **Pima Indians Diabetes Database** from Kaggle.
 
 ---
 
-## 🚀 Model 3: Multi-Layer Perceptron (Keras)
+## Model 3: Multi-Layer Perceptron (Keras)
 
 * **Implementation:** Keras `Sequential` API.
 * **Architecture:**
@@ -112,7 +112,7 @@ The dataset used is the **Pima Indians Diabetes Database** from Kaggle.
 
 ---
 
-## 📋 Conclusions
+## Conclusions
 
 1.  **Class Imbalance is Key:** All three models struggled to correctly classify the positive (1) class, as seen by the lower recall for "positive" (0.53 for RF, 0.47 for XGB, 0.59 for MLP). This is a classic symptom of an imbalanced dataset where the model becomes biased toward the majority class.
 2.  **Comparable Performance:** On this small dataset, the **Random Forest** and the **MLP** performed almost identically, achieving ~75% accuracy. The **XGBoost** model, with the chosen hyperparameters, performed slightly worse.
