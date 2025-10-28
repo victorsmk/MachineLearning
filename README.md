@@ -29,6 +29,3 @@ Here is a list of the projects included in this repository:
 
 ---
 
-```bash
-git clone [your-repository-git-url]
-cd [your-repository-name]
