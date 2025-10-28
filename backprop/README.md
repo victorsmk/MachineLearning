@@ -119,7 +119,7 @@ __init__(self, nin, function=None):
 
         Returns a list of all parameters (weights and bias) for this neuron.
 
-###Layer
+### `Layer`
 
 A layer of neurons that all receive the same input.
 ```python
@@ -153,7 +153,7 @@ __init__(self, nin, nout, function=None):
 
         Collects and returns all parameters from all Neurons in this layer.
 
-###Model
+### `Model`
 
 The complete Multi-Layer Perceptron (MLP) model.
 ```python
