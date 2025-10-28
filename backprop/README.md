@@ -4,7 +4,7 @@ This project is a minimal, from-scratch implementation of an automatic different
 
 The primary goal is to demystify backpropagation and the internal workings of modern deep-learning frameworks by building one from the ground up.
 
-## 📦 Project Components
+## Project Components
 
 The project is split into two main files:
 
@@ -13,7 +13,7 @@ The project is split into two main files:
 
 ---
 
-## ⚙️ `backprop.py` - The Autograd Engine
+## `backprop.py` - The Autograd Engine
 
 This file defines the `Scalar` class, which is the foundation of the entire project.
 
